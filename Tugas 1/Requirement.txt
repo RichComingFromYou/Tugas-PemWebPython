@@ -1,0 +1,5 @@
+Python 3.9.16
+Streamlit
+Pandas
+Numpy
+altair
