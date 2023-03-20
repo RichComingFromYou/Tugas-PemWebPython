@@ -77,7 +77,6 @@ df = pd.DataFrame({"Month": ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'A
 st.dataframe(df)  
 
 # Table
-st.title (':green[Table]')
 st.subheader (':green[Table]')
 st.table(df)
 
