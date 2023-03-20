@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+import streamlit as st
+
+st.title("Tugas 2")
+
+st.subheader("Latihan 2")
+
+st.subheader("CSGO PLayer and Twitch Viewer Count Database 2022")
+st.subheader("database with public google spread sheet")
+# Read in data from the Google Sheet.
+# Uses st.cache_data to only rerun when the query changes or after 10 min.
+@st.cache_data(ttl=600)
+def load_data(sheets_url):
+    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url)
+
+df = load_data(st.secrets["public_gsheets_url"])
+
+# Print results.
+for row in df.itertuples():
+    st.write(f"{row.Month} has {row.Player} player and {row.TwitchViewer} Twitch Viewer")
