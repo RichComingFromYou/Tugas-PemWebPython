@@ -122,7 +122,7 @@ if agree:
     st.write('Thats Great')
 
 # Media Element
-st.title ('green[Media Element]')
+st.title (':green[Media Element]')
 st.subheader (':green[Video]')
 st.video("https://youtu.be/ZOnQohTePwo")
 
